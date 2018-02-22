@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>eCommerce - Create Product</title>
+        <meta name="description" content="Create product">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="css/font.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        
+    </head>
+    <body>
+        <h1 class="title">Create Product</h1>
+        <form>
+            <div class="form-group">
+                    <label for="productTitle">Product title</label>
+                    <input class="form-control" name="productTitle" type="text" placeholder="Enter product title" />
+            </div>
+            <div class="form-group">
+                    <label for="productPrice">Product Price (USD)</label>
+                    <input class="form-control" name="productPrice" type="text" placeholder="Enter product price" />
+            </div>
+            <button type="submit" class="btn btn-primary">Create Product</button>
+        </form>
+
+        <script src="js/vendor/jquery-3.1.0.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/aws-cognito-sdk.min.js"></script>
+        <script src="js/vendor/amazon-cognito-identity.min.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/cognito-auth.js"></script>
+    </body>
+</html>

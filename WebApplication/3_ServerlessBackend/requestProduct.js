@@ -89,7 +89,9 @@ function findProduct(requestedProduct) {
 
 }
 
-function getRandomProduct() {}
+function getRandomProduct() {
+    
+}
 
 
 function recordRide(rideId, username, unicorn) {
