@@ -41,10 +41,10 @@ exports.handler = (event, context, callback) => {
     // into an object. A more robust implementation might inspect the Content-Type
     // header first and use a different parsing strategy based on that value.
     const requestBody = JSON.parse(event.body);
-
-    const pickupLocation = requestBody.PickupLocation;
+    const requestedProduct = requestBody.RequestedProduct;
 
     const unicorn = findUnicorn(pickupLocation);
+    const product = findProduct(requestedProduct);
 
     recordRide(rideId, username, unicorn).then(() => {
         // You can use the callback function to provide a return value from your Node.js
@@ -84,6 +84,13 @@ function findUnicorn(pickupLocation) {
     console.log('Finding unicorn for ', pickupLocation.Latitude, ', ', pickupLocation.Longitude);
     return fleet[Math.floor(Math.random() * fleet.length)];
 }
+
+function findProduct(requestedProduct) {
+
+}
+
+function getRandomProduct() {}
+
 
 function recordRide(rideId, username, unicorn) {
     return ddb.put({
