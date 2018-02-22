@@ -23,6 +23,7 @@ const ECommerce = window.ECommerce || {};
 
     function handleCreateProduct(event) {
         const product = {
+            id: parseInt(Math.random() * 1000, 10),
             title: $('#productTitleInput').val(),
             price: $('#productPriceInput').val(),
             currencyCode: 'USD'
@@ -31,7 +32,7 @@ const ECommerce = window.ECommerce || {};
         if (productErrors.length) {
             alert("Oh no baby what is you doin'?");
         } else {
-            createProduct(product); 
+            createProduct(product);
         }
     }
 

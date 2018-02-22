@@ -74,14 +74,14 @@ function saveProductToInventory(product, username) {
     return ddb.put({
         TableName: 'Products',
         Item: {
-            ProductId: 0,
+            ProductId: product.id,
             User: username,
             Product: product,
             ProductTitle: product.title,
             ProductPrice: product.price,
             ProductCurrencyCode: product.currencyCode,
             RequestTime: new Date().toISOString(),
-        }
+        },
     }).promise();
 }
 
