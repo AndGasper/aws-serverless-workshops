@@ -106,6 +106,10 @@ var WildRydes = window.WildRydes || {};
 
     /*
      *  Event Handlers
+     * Auth forms
+     * @name - handleSignin 
+     * @name  - registrationForm
+     * @name - verifyForm
      */
 
     $(function onDocReady() {
@@ -113,6 +117,12 @@ var WildRydes = window.WildRydes || {};
         $('#registrationForm').submit(handleRegister);
         $('#verifyForm').submit(handleVerify);
     });
+
+    /**
+     * @name handleProductCreate
+     * @param {object} event - jQuery Event Object
+     * @description - write to the 
+     */
 
     function handleSignin(event) {
         var email = $('#emailInputSignin').val();
