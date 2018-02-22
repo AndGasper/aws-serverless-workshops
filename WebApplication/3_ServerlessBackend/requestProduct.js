@@ -15,6 +15,7 @@ exports.handler = (event, context, callback) => {
     const requestBody = JSON.parse(event.body);
 
     const { productAttributes } = requestBody;
+    console.log('productAttributes', productAttributes);
 
     const errors = validateProduct(productAttributes);
 
@@ -36,7 +37,7 @@ exports.handler = (event, context, callback) => {
         });
     } else {
         let error = {
-            message: 'Uh, something went wrong, I\'m tired.',
+            message: JSON.stringify(productAttributes),
         };
         errorResponse(error.message, context.awsRequestId, callback);
     }
@@ -48,7 +49,7 @@ function validateProduct(product) {
     const { title } = product;
     let { price } = product;
     price = parseFloat(price);
-    const titleRegex = new RegExp('/^[A-z]{1,20}$/');
+    const titleRegex = new RegExp(/^[A-z]{1,20}$/);
     if (!titleRegex.test(title)) {
         errors.push('title');
     }

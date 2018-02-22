@@ -1,7 +1,7 @@
 /*global ECommerce _config*/
 // Note: This should likely be its own data store, but let's keep it simple for now
 
-const ECommerce = window.ECommerce || {};
+var ECommerce = window.ECommerce || {};
 
 (function ECommerceWrapper($) {
     var authToken; // Ideally this isn't an authToken
@@ -47,7 +47,7 @@ const ECommerce = window.ECommerce || {};
         const { title } = product;
         let { price } = product;
         price = parseFloat(price);
-        const titleRegex = new RegExp('/^[A-z]{1,20}$/');
+        const titleRegex = new RegExp(/^[A-z]{1,20}$/);
         if (!titleRegex.test(title)) {
             errors.push('title');
         }
