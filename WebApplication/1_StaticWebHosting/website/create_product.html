@@ -11,15 +11,16 @@
         
     </head>
     <body>
+        <div id="updates"></div>
         <h1 class="title">Create Product</h1>
         <form id="createProductForm">
             <div class="form-group">
                     <label for="productTitle">Product title</label>
-                    <input class="form-control" name="productTitle" type="text" placeholder="Enter product title" />
+                    <input class="form-control" id="productTitleInput" name="productTitle" type="text" placeholder="Enter product title" />
             </div>
             <div class="form-group">
                     <label for="productPrice">Product Price (USD)</label>
-                    <input class="form-control" name="productPrice" type="text" placeholder="Enter product price" />
+                    <input class="form-control" id="productPriceInput" name="productPrice" type="text" placeholder="Enter product price" />
             </div>
             <button type="submit" class="btn btn-primary">Create Product</button>
         </form>
