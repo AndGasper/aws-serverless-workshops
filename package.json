@@ -29,5 +29,8 @@
     "url": "ssh://git.amazon.com/pkg/WildRydesWorkshops"
   },
   "author": "Amazon.com, Inc.",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "dependencies": {
+    "babel-eslint": "^7.2.3"
+  }
 }

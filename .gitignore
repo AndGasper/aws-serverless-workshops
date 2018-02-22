@@ -2,3 +2,6 @@ node_modules
 .DS_Store
 build
 .vscode
+./WebApplication/1_StaticWebHosting/website/js/config.js
+
+
